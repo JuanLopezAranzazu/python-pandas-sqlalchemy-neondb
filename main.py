@@ -4,6 +4,7 @@ from models.director import Director
 from models.movie import Movie
 # utilidades
 from utils.load_data import load_db
+from utils.create_graphs import generate_graphs
 
 def main():
   # crear las tablas en la base de datos
@@ -25,6 +26,9 @@ def main():
 
   # cargar los datos en la base de datos
   load_db(db)
+  
+  # generar gráficos
+  generate_graphs(db)
 
 if __name__ == "__main__":
   main()
